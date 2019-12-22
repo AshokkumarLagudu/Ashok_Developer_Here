@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="63.661134">
-<testcase classname="Documentaion" name="validate links present in the page" time="63.661134">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="37.828377">
+<testcase classname="Documentaion" name="Test Aviva HomePage" time="37.828377">
 <system-out><![CDATA[Given open browser..........................................................passed
-When enter url..............................................................passed
-Then validate page title....................................................passed
-Then get linkes presen in the page..........................................passed
-Then validate all links.....................................................passed
-Then close browser..........................................................passed
+When enter "avivaURL".......................................................passed
+Then Verify page title......................................................passed
+Then click on login button..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

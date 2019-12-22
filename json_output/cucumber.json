@@ -3,19 +3,19 @@
     "line": 1,
     "elements": [
       {
-        "line": 2,
-        "name": "validate links present in the page",
+        "line": 13,
+        "name": "Test Aviva HomePage",
         "description": "",
-        "id": "documentaion;validate-links-present-in-the-page",
+        "id": "documentaion;test-aviva-homepage",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 10627908661,
+              "duration": 5632038411,
               "status": "passed"
             },
-            "line": 3,
+            "line": 14,
             "name": "open browser",
             "match": {
               "location": "StepDefinition_Documentaion._open_browser()"
@@ -24,63 +24,51 @@
           },
           {
             "result": {
-              "duration": 7099448815,
+              "duration": 12357036643,
               "status": "passed"
             },
-            "line": 4,
-            "name": "enter url",
+            "line": 15,
+            "name": "enter \"avivaURL\"",
             "match": {
-              "location": "StepDefinition_Documentaion._enter_url()"
+              "arguments": [
+                {
+                  "val": "avivaURL",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefinition_Documentaion.enter(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 84000577,
+              "duration": 27178660,
               "status": "passed"
             },
-            "line": 5,
-            "name": "validate page title",
+            "line": 16,
+            "name": "Verify page title",
             "match": {
-              "location": "StepDefinition_Documentaion._validate_page_title()"
+              "location": "StepDefinition_Documentaion.Verify_page_title()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 168126592,
+              "duration": 19812122978,
               "status": "passed"
             },
-            "line": 6,
-            "name": "get linkes presen in the page",
+            "line": 17,
+            "name": "click on login button",
             "match": {
-              "location": "StepDefinition_Documentaion._get_linkes_presen_in_the_page()"
+              "location": "StepDefinition_Documentaion.click_on_login_button()"
             },
             "keyword": "Then "
-          },
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 44623032551,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "validate all links",
-            "match": {
-              "location": "StepDefinition_Documentaion._validate_all_links()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1058617093,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "close browser",
-            "match": {
-              "location": "StepDefinition_Documentaion.close_browser()"
-            },
-            "keyword": "Then "
+            "line": 12,
+            "name": "@aviva"
           }
         ]
       }

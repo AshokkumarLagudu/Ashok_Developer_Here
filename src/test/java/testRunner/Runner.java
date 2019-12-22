@@ -14,7 +14,8 @@ import cucumber.api.junit.Cucumber;
 		format={"pretty","html:target/Documentation-report","junit:XmlReports/Documetation.xml",
 				"json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"},
 		monochrome=true,
-		dryRun=false
+		dryRun=false,
+		tags={"@aviva"}
 		
 		)
 

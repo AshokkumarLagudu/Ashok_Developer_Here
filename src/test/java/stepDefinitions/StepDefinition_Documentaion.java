@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 
 import com.Base.BaseClass;
+import com.PageClasses.Aviva_Home_Page;
 import com.PageClasses.DocumentationPage;
 import com.Utils.ReusableMethods;
 
@@ -16,19 +17,28 @@ import junit.framework.Assert;
 public class StepDefinition_Documentaion extends BaseClass {
 	
 	DocumentationPage documentationPage;
+	Aviva_Home_Page avivaHomePage;
 	
 	//opening browser
 	@Given("^open browser$")
 	public void _open_browser() throws Throwable {
 		documentationPage=new DocumentationPage();
+		avivaHomePage=new Aviva_Home_Page();
 		initialise();
 	}
 
+	
 	//Enter url
-	@When("^enter url$")
-	public void _enter_url() throws Throwable {
-		driver.get(prop.getProperty("url"));
+	@When("^enter \"([^\"]*)\"$")
+	public void enter(String arg) throws Throwable {
+	    if(arg.equals("ulr")){
+	    	driver.get(prop.getProperty("url"));
+	    }else if(arg.equals("avivaURL")){
+	    	driver.get(prop.getProperty("avivaURL"));
+
+	    }
 	}
+
 
 	//validating page title
 	@Then("^validate page title$")
@@ -54,6 +64,17 @@ public class StepDefinition_Documentaion extends BaseClass {
 		documentationPage.validateLinks(links);
 		
 	    
+	}
+
+	@Then("^Verify page title$")
+	public void Verify_page_title() throws Throwable {
+	   String title= avivaHomePage.getPageTitle();
+	    Assert.assertEquals(prop.getProperty("avivaHomePageTitle"), title);
+	}
+
+	@Then("^click on login button$")
+	public void click_on_login_button() throws Throwable {
+	    avivaHomePage.clickOnLogin();;
 	}
 	
 	//closing the browser
